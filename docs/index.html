@@ -14,12 +14,12 @@
 	This is my blog
       </p>
     </header>
-<div id="wrapper">
 <nav><ul>
   <li><a href="#Extremely-simple-blogging-engine">Extremely simple blogging engine</a></li>
+  <li><a href="#Demo-post">Demo post</a></li>
 </ul></nav>
-<a name="Extremely-simple-blogging-engine"></a>
-<section><article>
+<section>
+<article id="Extremely-simple-blogging-engine">
 <h1>Extremely simple blogging engine</h1>
 
 <p>04 April 2018</p>
@@ -66,13 +66,43 @@ cat post.html
 
 <p>The engine sorts all markdown files in a directory called <em>articles</em> converts them to html a sandwiches it between a html header and footer. That is all, the rest is handled by <em>.css</em>. No JavaScript is needed at the moment though I might enrich the functionality of this blog in the future with it.</p>
 
+<p>This is how the <em>markdown</em> for one of my <a href="#Demo-post">posts</a> looks like:</p>
+
+<pre><code># Demo post
+04 April 2018
+
+Hello World!
+
+Just a demo for [this](#Extremely-simple-blogging-engine) article to show you how an post looks in markdown.
+
+* demo
+* markdown
+</code></pre>
+
+<p>You can find the source code to this script (and my entire blog) <a href="https://github.com/pluizer/blog">here on github</a>.</p>
+
 <ul>
 <li>blogging</li>
 <li>brutalism</li>
 <li>unix</li>
 </ul>
 
-</article></section>
-</div>
+</article>
+<article id="Demo-post">
+<h1>Demo post</h1>
+
+<p>04 April 2018</p>
+
+<p>Hello World!</p>
+
+<p>Just a demo for <a href="#Extremely-simple-blogging-engine">this</a> article to show you how an post looks in markdown.</p>
+
+<ul>
+<li>demo</li>
+<li>markdown</li>
+</ul>
+
+</article>
+</section>
 	</body>
 </html>
