@@ -11,8 +11,6 @@ function title() {
 # place to header of the page
 cat pre.html
 
-echo '<div id="wrapper">'
-
 # place links to articles
 echo "<nav><ul>"
 for filename in $articles; do
@@ -22,15 +20,14 @@ done;
 echo "</ul></nav>"
 
 # place articles
+echo "<section>"
 for filename in $articles; do
     title=`title $filename`
-    echo "<a name=\"${title// /-}\"></a>"
-    echo "<section><article>"
+    echo "<article id=\"${title// /-}\">"
     markdown $filename
-    echo "</article></section>"
+    echo "</article>"
 done;
-
-echo "</div>"
+echo "</section>"
 
 # place the footer of the page
 cat post.html
