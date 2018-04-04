@@ -60,11 +60,10 @@ for filename in $articles; do
     echo "&lt;/article&gt;"
 done;
 echo "&lt;/section&gt;"
+
+# place the footer of the page
+cat post.html
 </code></pre>
-
-<h1>place the footer of the page</h1>
-
-<p>cat post.html</p>
 
 <p>The engine sorts all markdown files in a directory called <em>articles</em> converts them to html a sandwiches it between a html header and footer. That is all, the rest is handled by <em>.css</em>. No JavaScript is needed at the moment though I might enrich the functionality of this blog in the future with it.</p>
 
