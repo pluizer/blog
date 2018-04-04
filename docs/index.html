@@ -32,8 +32,8 @@
 
 <pre><code>#!/bin/bash
 
-# all articles by date
-articles=`ls -t articles/*.md`
+# all articles by creation time
+articles=`ls -tU articles/*.md`
 
 # return the title an article
 function title() {
@@ -52,17 +52,19 @@ done;
 echo "&lt;/ul&gt;&lt;/nav&gt;"
 
 # place articles
+echo "&lt;section&gt;"
 for filename in $articles; do
     title=`title $filename`
-    echo "&lt;a name=\"${title// /-}\"&gt;&lt;/a&gt;"
-    echo "&lt;section&gt;&lt;article&gt;"
+    echo "&lt;article id=\"${title// /-}\"&gt;"
     markdown $filename
-    echo "&lt;/article&gt;&lt;/section&gt;"
+    echo "&lt;/article&gt;"
 done;
-
-# place the footer of the page
-cat post.html
+echo "&lt;/section&gt;"
 </code></pre>
+
+<h1>place the footer of the page</h1>
+
+<p>cat post.html</p>
 
 <p>The engine sorts all markdown files in a directory called <em>articles</em> converts them to html a sandwiches it between a html header and footer. That is all, the rest is handled by <em>.css</em>. No JavaScript is needed at the moment though I might enrich the functionality of this blog in the future with it.</p>
 
