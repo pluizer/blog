@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# all articles by date
-articles=`ls -t articles/*.md`
+# all articles by creation time
+articles=`ls -tU articles/*.md`
 
 # return the title an article
 function title() {
