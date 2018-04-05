@@ -23,10 +23,6 @@ body > header > ul {
     padding			: 0;
 }
 
-body > header > ul > li::before {
-    content			: ">> ";
-}
-
 body > header > ul > li {
     margin-right		: .5em;
     background-color		: #d7ff00;
