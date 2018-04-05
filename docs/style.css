@@ -1,9 +1,10 @@
-body {
+html, body {
     font-family			: Impact, Charcoal, sans-serif;
     background-color		: #fdfde7;
     margin			: 0;
     color			: #303030;
     overflow-x			: hidden;
+    height			: 100%;
 }
 
 header {
@@ -13,7 +14,25 @@ header {
 
 body > header {
     margin-bottom		: 1em;
+    width			: 100%;
 }
+
+body > header > ul {
+    list-style-type		: none;
+    display			: flex;
+    padding			: 0;
+}
+
+body > header > ul > li::before {
+    content			: ">> ";
+}
+
+body > header > ul > li {
+    margin-right		: .5em;
+    background-color		: #d7ff00;
+    padding			: .3em .5em .3em .5em;
+}
+
 
 article > h1:first-of-type {
     background-color		: #afd7ff;
@@ -51,8 +70,6 @@ article p {
     padding			: 5px;
 }
 
-#wrapper {
-}
 
 @media (min-width: 800px) {
     nav {
@@ -79,4 +96,17 @@ code {
     overflow			: auto;
     overflow-y			: hidden;
     white-space			: no-wrap;
+}
+
+#rvr_totop {
+    color			: #303030;
+    position			: fixed;
+    bottom			: 0;
+    background-color		: #d7ff00;
+    padding			: .3em .5em .3em .5em;
+    text-decoration		: none;
+}
+
+#rvr_totop:visited {
+    color			: #303030;
 }

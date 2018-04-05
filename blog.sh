@@ -19,6 +19,8 @@ for filename in $articles; do
 done;
 echo "</ul></nav>"
 
+# place holder for tags
+
 # place articles
 echo "<section>"
 for filename in $articles; do
@@ -28,6 +30,9 @@ for filename in $articles; do
     echo "</article>"
 done;
 echo "</section>"
+
+echo '<div style="clear: both;"></div>'
+echo '<a id="rvr_totop" href="#top">to top</a>'
 
 # place the footer of the page
 cat post.html
