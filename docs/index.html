@@ -16,11 +16,70 @@
       </p>
     </header>
 <nav><ul>
+  <li><a href="#Game-engine-for-Chicken-Scheme">Game engine for Chicken Scheme</a></li>
   <li><a href="#Extremely-simple-blogging-engine">Extremely simple blogging engine</a></li>
   <li><a href="#Demo-post">Demo post</a></li>
-  <li><a href="#Game-engine-for-Chicken-Scheme">Game engine for Chicken Scheme</a></li>
 </ul></nav>
 <section>
+<article id="Game-engine-for-Chicken-Scheme">
+<h1>Game engine for Chicken Scheme</h1>
+
+<p>10 April 2018</p>
+
+<p>I&rsquo;ve always loved Scheme for it&rsquo;s elegancy and expressiveness. But always considered it to be a toy language as it did not have any practical use for me. It seemed to academical to be practical for me.</p>
+
+<p>That is until I learned about <a href="https://www.call-cc.org/">Chicken Scheme</a>. The great thing about this implementation is that is compiles Scheme to pure C. Because if this it is possible to use any C library without effort and, with a just a little effort, C++ libraries.</p>
+
+<p>In my spare time I&rsquo;ve been working, one-and-of, on my own game called /Grimmol/. It is written purely in Chicken Scheme including the 2D game engine called /Coati/. I released it under a MIT license and you can find it <a href="https://github.com/pluizer/coati-2d">here</a>.</p>
+
+<p>Coati is a simple to use fast 2D game programming library for Chicken Scheme. Most of the things needed in other to write a 2D game are implemented. I clean Scheme like way to handle sound is coming but in the mean time you can use <a href="Sound%20is%20comming%20but%20you%20can%20use%20the%20SDL">SDL mixer</a>.</p>
+
+<p>To get started using Coati make sure Chicken Scheme is installed along with the following libraries:</p>
+
+<ul>
+<li>sdl-base</li>
+<li>sdl-ttf</li>
+<li>opengl-glew</li>
+<li>gl-utils</li>
+<li>gl-math</li>
+<li>soil</li>
+<li>matchable</li>
+</ul>
+
+
+<p>Then install the needed Chicken /Eggs/ &hellip;</p>
+
+<pre><code>chicken-install -s sdl-base sdl-ttf opengl-glew gl-utils gl-math soil matchable
+</code></pre>
+
+<p>&hellip; clone and install Coati &hellip;</p>
+
+<pre><code>git clone https://github.com/pluizer/coati-2d.git
+cd coati-2d
+chicken-install -s
+</code></pre>
+
+<p>&hellip; and try out some samples &hellip;</p>
+
+<pre><code>cd examples/
+csi 01.scm
+csi 02.scm
+</code></pre>
+
+<p>The tutorial to get started can be found <a href="https://github.com/pluizer/coati-2d/blob/master/TUTORIAL.org">here</a>.</p>
+
+<p>I hope that this library can give somebody a fun introduction to the wunderful world of Scheme!</p>
+
+<ul>
+<li>chicken scheme</li>
+<li>scheme</li>
+<li>game development</li>
+<li>coati</li>
+<li>programming</li>
+<li>functional</li>
+</ul>
+
+</article>
 <article id="Extremely-simple-blogging-engine">
 <h1>Extremely simple blogging engine</h1>
 
@@ -103,65 +162,6 @@ Just a demo for [this](#Extremely-simple-blogging-engine) article to show you ho
 <ul>
 <li>demo</li>
 <li>markdown</li>
-</ul>
-
-</article>
-<article id="Game-engine-for-Chicken-Scheme">
-<h1>Game engine for Chicken Scheme</h1>
-
-<p>10 April 2018</p>
-
-<p>I&rsquo;ve always loved Scheme for it&rsquo;s elegancy and expressiveness. But always considered it to be a toy language as it did not have any practical use for me. It seemed to academical to be practical for me.</p>
-
-<p>That is until I learned about <a href="https://www.call-cc.org/">Chicken Scheme</a>. The great thing about this implementation is that is compiles Scheme to pure C. Because if this it is possible to use any C library without effort and, with a just a little effort, C++ libraries.</p>
-
-<p>In my spare time I&rsquo;ve been working, one-and-of, on my own game called /Grimmol/. It is written purely in Chicken Scheme including the 2D game engine called /Coati/. I released it under a MIT license and you can find it <a href="https://github.com/pluizer/coati-2d">here</a>.</p>
-
-<p>Coati is a simple to use fast 2D game programming library for Chicken Scheme. Most of the things needed in other to write a 2D game are implemented. I clean Scheme like way to handle sound is coming but in the mean time you can use <a href="Sound%20is%20comming%20but%20you%20can%20use%20the%20SDL">SDL mixer</a>.</p>
-
-<p>To get started using Coati make sure Chicken Scheme is installed along with the following libraries:</p>
-
-<ul>
-<li>sdl-base</li>
-<li>sdl-ttf</li>
-<li>opengl-glew</li>
-<li>gl-utils</li>
-<li>gl-math</li>
-<li>soil</li>
-<li>matchable</li>
-</ul>
-
-
-<p>Then install the needed Chicken /Eggs/ &hellip;</p>
-
-<pre><code>chicken-install -s sdl-base sdl-ttf opengl-glew gl-utils gl-math soil matchable
-</code></pre>
-
-<p>&hellip; clone and install Coati &hellip;</p>
-
-<pre><code>git clone https://github.com/pluizer/coati-2d.git
-cd coati-2d
-chicken-install -s
-</code></pre>
-
-<p>&hellip; and try out some samples &hellip;</p>
-
-<pre><code>cd examples/
-csi 01.scm
-csi 02.scm
-</code></pre>
-
-<p>The tutorial to get started can be found <a href="https://github.com/pluizer/coati-2d/blob/master/TUTORIAL.org">here</a>.</p>
-
-<p>I hope that this library can give somebody a fun introduction to the wunderful world of Scheme!</p>
-
-<ul>
-<li>chicken scheme</li>
-<li>scheme</li>
-<li>game development</li>
-<li>coati</li>
-<li>programming</li>
-<li>functional</li>
 </ul>
 
 </article>
