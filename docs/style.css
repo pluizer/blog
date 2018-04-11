@@ -36,12 +36,18 @@ article > h1:first-of-type {
     margin			: 0;
 }
 
+
+article > p {
+    width			: 90%;
+}
+
 article > p:first-of-type {
     background-color		: #afd7ff;
     padding			: 0;
     margin			: 0;
     text-align			: right;
     font-size			: small;
+    width			: 100%;
 }
 
 article > ul:last-of-type {
@@ -87,8 +93,8 @@ code {
     color			: #c6c6c6;
     border-color		: #afd7ff;
     border-style		: solid;
-    width			: 100%;
-    max-width			: 100%;
+    width			: 90%;
+    max-width			: 90%;
     overflow			: auto;
     overflow-y			: hidden;
     white-space			: no-wrap;
